@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+</head>
+
+<body>
+  <!--ШАПКА-->
+  <header class=''>
+    <div>
+      <nav>
+        <a href='index.html'>
+          <img src='img/nerds-logo.svg' width='159.87' height='65.02' alt='nerds-logo'>
+        </a>
+        <ul>
+          <li><a href='index.html'>Студия</a></li>
+          <li><a href='blank.html'>Клиенты</a></li>
+          <li><a href='catalog.html'>Магазин</a></li>
+          <li><a href='blank.html'>Контакты</a></li>
+        </ul>
+        <a href="blank.html">
+          <img src='img/cart-icon.svg' width='15' height='15' alt='cart-icon'>Корзина
+        </a>
+      </nav>
+      <h1>Магазин готовых шаблонов</h1>
+    </div>
+  </header>
+
+  <!--СОДЕРЖИМОЕ-->
+  <main class=''>
+    <div>
+      <b>СОРТИРОВАТЬ:</b> 
+      <span>ПО ЦЕНЕ</span> 
+      <span>ПО ТИПУ</span> 
+      <span>ПО НАЗВАНИЮ</span>
+      <img src='img/catalog-img/icon-down-dir.svg' width='11' height='10' alt='down-dir'>
+      <img src='img/catalog-img/icon-up-dir.svg' width='11' height='10' alt='up-dir'>
+    </div>
+    <form action='#' method='get' >
+      <fieldset>
+        <legend>Стоимость:</legend>
+        <img src='img/catalog-img/Rectangle 21.png' width='260' height='80' alt='rect'>
+        <label>от<input type='text' value='0'></label>
+        <label>до<input type='text' value='15000'></label>
+      </fieldset>
+      <fieldset>
+        <legend>Сетка:</legend>
+        <label><input type='radio' name='grid' value='adaptive' checked>Адаптивная</label>
+        <label><input type='radio' name='grid' value='fixed'>Фиксированная</label>
+        <label><input type='radio' name='grid' value='rubbery'>Резиновая</label>
+      </fieldset>
+      <fieldset>
+        <legend>Особенности:</legend>
+        <label><input type='checkbox' name='slider' checked>Слайдер</label>
+        <label><input type='checkbox' name='advantages'>Блок преимуществ</label>
+        <label><input type='checkbox' name='news' checked>Новости</label>
+        <label><input type='checkbox' name='gallery'>Галерея</label>
+        <label><input type='checkbox' name='basket'>Корзина</label>
+      </fieldset>
+      <button>Показать</button>
+      <img src='img/catalog-img/grey btn.png' width='260' height='50' alt='show'>
+    </form>
+    <section>
+      <img src='img/catalog-img/img-sedona 1.png' width='358' height='578' alt='sedona'>
+      <img src='img/catalog-img/img-pink 1.png' width='358' height='578' alt='pink'>
+      <img src='img/catalog-img/img-barbershop 1.png' width='358' height='578' alt='borodinski'>
+      <img src='img/catalog-img/img-mishka 1.png' width='358' height='578' alt='mishka'>
+      <img src='img/catalog-img/img-aplus 1.png' width='358' height='578' alt='aplus'>
+      <img src='img/catalog-img/img-kvast 1.png' width='358' height='578' alt='kvast'>
+      <p>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>СЛЕДУЮЩАЯ</button>
+      </p>
+    </section>
+  </main>
+
+  <!--ПОДВАЛ-->
+  <footer class=''>
+    <section>
+      <section>
+        <img src='img/map 1.png' width='1440' height='416' alt='maps'>
+        <img src='img/map-marker 1.png' width='231' height='190' alt='map-marker'>
+        <div class='contacts'>
+          <h2>Nerds design studio</h2>
+          <p>191186, Санкт-Петербург,<br>
+            ул. Б.Конюшенная, д.19/8</p>
+          <p>тел. +7(812) 275-75-75</p>
+          <button>Напишите нам</button>
+          <img src='img/btn-footer.png' width='219' height='50' alt='btn-footer'>
+          <!--POPUP-->
+          <h3>Напишите нам</h3>
+          <a href=''>
+            <img src='blank.html' alt='icon-close '>
+          </a>
+          <form method='post'>
+            <br>
+            <label>
+              Ваше имя:<br>
+              <input type='text' name='login' value='Имя Фамилия'>
+            </label> <br>
+            <label>
+              Ваш email:<br>
+              <input type='text' name='email' value='email@example.com'>
+            </label>
+            <br>
+            <label>
+              Текст письма:<br>
+              <textarea cols='80' rows='3'>В свободной форме</textarea>
+            </label>
+            <br>
+            <input type='button' name='send' value='отправить'>
+          </form>
+        </div>
+      </section>
+      <a href=''>
+        <img src='img/Shape 2 copy 5.svg' width='81' height='81' alt='icon vk'>
+      </a>
+      <a href=''>
+        <img src='img/Shape 2 copy 5.svg' width='81' height='81' alt='icon fb'>
+      </a>
+      <a href=''>
+        <img src='img/Shape 2 copy 5.svg' width='81' height='81' alt='icon inst'>
+      </a>
+      <p class=''>Давайте дружить, это выгодно!</p>
+      <p>Скидка 10% для друзей из социальных сетей</p>
+    </section>
+  </footer>
+
+
+</body>
+
+</html>
