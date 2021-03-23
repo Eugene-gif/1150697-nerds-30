@@ -3,12 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href='css/normalize.css'>
+  <link rel="stylesheet" href='css/style.css'>
   <title>HTML Academy: Нёрдс</title>
 </head>
 
-<body>
+<body class='page-body inner-page'>
   <!--ШАПКА-->
-  <header class=''>
+  <header class='main-header'>
     <div>
       <nav>
         <a href='index.html'>
@@ -29,11 +33,11 @@
   </header>
 
   <!--СОДЕРЖИМОЕ-->
-  <main class=''>
+  <main class='container'>
     <div>
-      <b>СОРТИРОВАТЬ:</b> 
-      <span>ПО ЦЕНЕ</span> 
-      <span>ПО ТИПУ</span> 
+      <b>СОРТИРОВАТЬ:</b>
+      <span>ПО ЦЕНЕ</span>
+      <span>ПО ТИПУ</span>
       <span>ПО НАЗВАНИЮ</span>
       <img src='img/catalog-img/icon-down-dir.svg' width='11' height='10' alt='down-dir'>
       <img src='img/catalog-img/icon-up-dir.svg' width='11' height='10' alt='up-dir'>
@@ -62,24 +66,24 @@
       <button>Показать</button>
       <img src='img/catalog-img/grey btn.png' width='260' height='50' alt='show'>
     </form>
-    <section>
+    <section class='gallery'>
       <img src='img/catalog-img/img-sedona 1.png' width='358' height='578' alt='sedona'>
       <img src='img/catalog-img/img-pink 1.png' width='358' height='578' alt='pink'>
       <img src='img/catalog-img/img-barbershop 1.png' width='358' height='578' alt='borodinski'>
       <img src='img/catalog-img/img-mishka 1.png' width='358' height='578' alt='mishka'>
       <img src='img/catalog-img/img-aplus 1.png' width='358' height='578' alt='aplus'>
       <img src='img/catalog-img/img-kvast 1.png' width='358' height='578' alt='kvast'>
-      <p>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>СЛЕДУЮЩАЯ</button>
+      <p class='btn-gallery'>
+        <button class='btn'>1</button>
+        <button class='btn'>2</button>
+        <button class='btn'>3</button>
+        <button class='btn'>СЛЕДУЮЩАЯ</button>
       </p>
     </section>
   </main>
 
   <!--ПОДВАЛ-->
-  <footer class=''>
+  <footer class='footer'>
     <section>
       <section>
         <img src='img/map 1.png' width='1440' height='416' alt='maps'>
