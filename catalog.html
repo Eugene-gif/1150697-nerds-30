@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <link rel="stylesheet" href='css/normalize.css'>
   <link rel="stylesheet" href='css/style.css'>
   <title>HTML Academy: Нёрдс</title>
@@ -35,59 +38,218 @@
     <section class='slider'>
       <div class="container">
         <div class="slider-content">
-          <div class='slider-text'>
-
-            <h1>Магазин готовых шаблонов</h1>
-
-          </div>
+          <h1 class="catalog-h1">Магазин готовых шаблонов</h1>
         </div>
       </div>
     </section>
-    <div>
-      <b>СОРТИРОВАТЬ:</b>
-      <a><span>ПО ЦЕНЕ</span></a>
-      <a><span>ПО ТИПУ</span></a>
-      <a><span>ПО НАЗВАНИЮ</span></a>
-      <img src='img/catalog-img/icon-down-dir.svg' width='11' height='10' alt='down-dir'>
-      <img src='img/catalog-img/icon-up-dir.svg' width='11' height='10' alt='up-dir'>
+    <div class="container">
+      <div class="catalog-content">
+        <form class="filters" method="get" action="https://echo.htmlacademy.ru">
+          <div>
+            <span class="catalog-cost">Стоимость</span>
+          </div>
+          <fieldset class="filter-item">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15 000"></label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="grid-item">
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="adaptive" id="adaptive" checked>
+                <label for="adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="fixed" id="fixed">
+                <label for="fixed">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" name="rubber" id="rubber">
+                <label for="rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-special">
+            <legend>Особенности</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="slider" id="slider" checked>
+                <label for="slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="advantages" id="advantages">
+                <label for="advantages">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="news" id="news" checked>
+                <label for="news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="gallery" id="gallery">
+                <label for="gallery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" name="basket" id="basket">
+                <label for="basket">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="btn btn-grey" type="submit">Показать</button>
+        </form>
+        <section class='gallery'>
+          <div class="filter">
+            <div>
+              <b>СОРТИРОВАТЬ:</b>
+            </div>
+            <div class="filter-items">
+              <div class="filter-btns">
+                <a><span>ПО ЦЕНЕ</span></a>
+                <a><span>ПО ТИПУ</span></a>
+                <a><span>ПО НАЗВАНИЮ</span></a>
+              </div>
+              <div>
+                <img class="filter-arrow-left" src='img/catalog-img/icon-down-dir.svg' width='11' height='10'
+                  alt='down-dir'>
+                <img src='img/catalog-img/icon-up-dir.svg' width='11' height='10' alt='up-dir'>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-items">
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-items-item">
+              <div class="catalog-items-top">
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+                <span class="catalog-item-top-circle"></span>
+              </div>
+              <div class="catalog-items-body catalog-items-body-nerds">
+                <div class="catalog-items-card">
+                  <h3 class="catalog-items-card-h3">
+                    Nerds
+                  </h3>
+                  <span class="catalog-items-card-text">
+                    Информационный сайт <br>
+                    для туристов
+                  </span> <br>
+                  <button class="btn btn-modal" href="#">9 900 ₽</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class='btn-gallery'>
+            <button class='btn btn-grey'>1</button>
+            <button class='btn btn-grey'>2</button>
+            <button class='btn btn-grey'>3</button>
+            <button class='btn btn-grey'>СЛЕДУЮЩАЯ</button>
+          </p>
+        </section>
+      </div>
     </div>
-    <form action='#' method='get'>
-      <fieldset>
-        <legend>Стоимость:</legend>
-        <img src='img/catalog-img/Rectangle 21.png' width='260' height='80' alt='rect'>
-        <label>от<input type='text' value='0'></label>
-        <label>до<input type='text' value='15000'></label>
-      </fieldset>
-      <fieldset>
-        <legend>Сетка:</legend>
-        <label><input type='radio' name='grid' value='adaptive' checked>Адаптивная</label>
-        <label><input type='radio' name='grid' value='fixed'>Фиксированная</label>
-        <label><input type='radio' name='grid' value='rubbery'>Резиновая</label>
-      </fieldset>
-      <fieldset>
-        <legend>Особенности:</legend>
-        <label><input type='checkbox' name='slider' checked>Слайдер</label>
-        <label><input type='checkbox' name='advantages'>Блок преимуществ</label>
-        <label><input type='checkbox' name='news' checked>Новости</label>
-        <label><input type='checkbox' name='gallery'>Галерея</label>
-        <label><input type='checkbox' name='basket'>Корзина</label>
-      </fieldset>
-      <button class='btn btn-grey'>Показать</button>
-    </form>
-    <section class='gallery'>
-      <img src='img/catalog-img/img-sedona 1.png' width='358' height='578' alt='sedona'>
-      <img src='img/catalog-img/img-pink 1.png' width='358' height='578' alt='pink'>
-      <img src='img/catalog-img/img-barbershop 1.png' width='358' height='578' alt='borodinski'>
-      <img src='img/catalog-img/img-mishka 1.png' width='358' height='578' alt='mishka'>
-      <img src='img/catalog-img/img-aplus 1.png' width='358' height='578' alt='aplus'>
-      <img src='img/catalog-img/img-kvast 1.png' width='358' height='578' alt='kvast'>
-      <p class='btn-gallery'>
-        <button class='btn btn-grey'>1</button>
-        <button class='btn btn-grey'>2</button>
-        <button class='btn btn-grey'>3</button>
-        <button class='btn btn-grey'>СЛЕДУЮЩАЯ</button>
-      </p>
-    </section>
   </main>
   <!--ПОДВАЛ-->
   <footer class='main-footer'>
@@ -99,7 +261,7 @@
             <p>191186, Санкт-Петербург,<br>
               ул. Б.Конюшенная, д.19/8</p>
             <p>тел. +7(812) 275-75-75</p>
-            <button class='btn btn-modal'>Напишите нам</button>
+            <a data-fancybox href="#main-popup" class='btn btn-modal'>Напишите нам</a>
           </div>
         </div>
       </div>
@@ -153,6 +315,31 @@
       </label>
       <br>
       <input class='btn btn-form' type='button' name='send' value='отправить'>
+    </form>
+  </div>
+  <!-- popup -->
+  <div class="popup" id="main-popup">
+    <h2 class="popup-h2">
+      Напишите нам
+    </h2>
+    <form class="popup-form" action="#">
+      <div class="popup-form-row">
+        <div class="popup-form-item">
+          <label for="name">Ваше имя</label>
+          <input type="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="popup-form-item">
+          <label for="name">Ваше e-mail</label>
+          <input type="name" placeholder="email@example.com">
+        </div>
+      </div>
+      <div class="popup-form-item popup-form-item-textarea">
+        <label for="textarea">Текст письма:</label>
+        <textarea class="popup-textarea"></textarea>
+      </div>
+      <button class="btn btn-modal">
+        отправить
+      </button>
     </form>
   </div>
 </body>
